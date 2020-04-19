@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     font-family: Roboto;
+    -webkit-text-size-adjust: none;
 } 
 table{
     margin: 0 auto;
