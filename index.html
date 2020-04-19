@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calorie Calculator</title>
+    <!-- Roboto Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> 
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    <h1 class="header">Calorie Calculator</h1>
+    <div id="navbar">
+        <button id="bmrMode" style="background-color: pink;">Bmr Mode</button>
+        <button id="heartRateMode">Heart Rate Mode</button>
+    </div>
+    <div id="container">
+        <div class="calculatorSection" id="bmrCalculator">
+            <table>
+                <tr>
+                    <td>
+                    <label>Age: (ages 15-80)</label>
+                    </td>
+                    <td>
+                        <input type="text" class="age" name="age" required ><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <label>Gender: </label>
+                    </td>
+                    <td>
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" value="male" name="gender">
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" value="female" name="gender"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Height (in cms): </label>
+                    </td>
+                    <td>
+                        <input type="text" class="height" required><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Weight (in kgs): </label>
+                    </td>
+                    <td>
+                        <input type="text" class="weight" required><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td> 
+                        <button type="submit" id="calculateBMI" class="calculateButton">Calculate</button>
+                    </td>
+                    <td>
+                        <button type="submit" class="clearResults">Clear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 class="result">Results</h2>
+                    </td>
+                    <td>
+                        <h2>BMR = <span class="valueDisplay">0 </span> Calories</h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 class="display"></h2><br>
+                    </td>
+                </tr>
+                <br>
+            </table>
+            <h2 style="text-align: center;" id="tableText">Daily calorie needs based on activity level</h2>
+            <table id="referenceChart">
+                <thead>
+                    <tr>
+                        <th>
+                            Activity Level
+                        </th>
+                        <th>
+                            Calories
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        Sedentary: little or no exercise
+                    </td>
+                    <td>
+                        2,054
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Exercise 1-3 times/week	
+                    </td>
+                    <td>
+                        2,353
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Exercise 4-5 times/week	
+                    </td>
+                    <td>
+                        2,507
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Daily exercise or intense exercise 3-4 times/week	
+                    </td>
+                    <td>
+                        2,652
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Intense exercise 6-7 times/week		
+                    </td>
+                    <td>
+                        2,952
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Very intense exercise daily, or physical job		
+                    </td>
+                    <td>
+                        3,251
+                    </td>
+                </tr>
+            </tbody>
+            </table>
+            <br>
+            <p><span class="referenceTableFooterText">Exercise: </span>15-30 minutes of elevated heart rate activity.</p>
+            <p><span class="referenceTableFooterText">Intense exercise: </span>45-120 minutes of elevated heart rate activity.</p>
+            <p><span class="referenceTableFooterText">Very intense exercise: </span>2+ hours of elevated heart rate activity.</p>
+            <div>
+                <br>
+                <p class="formulaHeader calculatedColor">BMR Calculator Formula for Men:</p>
+                <span class="formula">BMR = 66 + (13.7 x WEIGHT_IN_KILOGRAM) + (5 x HEIGHT_IN_CENTIMETER) - (6.8 x AGE_IN_YEAR)</span>
+                <br>
+                <p class="formulaHeader calculatedColor">BMR Calculator Formula for Women:</p>
+                <span class="formula">BMR = 655 + (9.6 x WEIGHT_IN_KILOGRAM) + (1.8 x HEIGHT_IN_CENTIMETER) - (4.7 x AGE_IN_YEAR)</span>
+            </div>
+            
+        </div>
+        <!-- Keeping the Heart Rate Calculator hidden at Page Load -->
+        <div id="heartRateCalculator" class="calculatorSection hideCalculator">
+            <table>
+                <tr>
+                    <td>
+                        <label>Age: (ages 15-80)</label>
+                    </td>
+                    <td>
+                        <input type="text" class="age" name="age" required><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Gender: </label>
+                    </td>
+                    <td>
+                        <label for="male">Male</label>
+                        <input type="radio" id="male" value="male" name="gender">
+                        <label for="female">Female</label>
+                        <input type="radio" id="female" value="female" name="gender"><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Weight (in kgs): </label>
+                    </td>
+                    <td>
+                        <input type="text" class="weight" required><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Average Heart Rate (in bpm): </label>
+                    </td>
+                    <td>
+                        <input type="text" id="avgHeartRate" required><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Workout Duration (minutes): </label>
+                    </td>
+                    <td>
+                        <input type="text" id="workoutDuration" required><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit" id="calculateheartRate" class="calculateButton">Calculate</button>
+                    </td>
+                    <td>
+                        <button type="submit" class="clearResults">Clear</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 class="result">Results</h2>
+                    </td>
+                    <td>
+                        <h2>Calories = <span class="valueDisplay">0 </span></h2>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h2 class="display"></h2>
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <br>
+                <p class="formulaHeader calculatedColor">Accurate Calorie Burned Calculator Formula for Men (kCal):</p>
+                <span class="formula">Calorie Burned = [(AGE_IN_YEAR x 0.2017) + (WEIGHT_IN_KILOGRAM x 0.1988) + (HEART_BEAT_PER_MINUTE x 0.6309) - 55.0969] x DURATION_IN_MINUTE / 4.184</span>
+                <br>
+                <p class="formulaHeader calculatedColor">Accurate Calorie Burned Calculator Formula for Women (kCal):</p>
+                <span class="formula">Calorie Burned = [(AGE_IN_YEAR x 0.074) + (WEIGHT_IN_KILOGRAM x 0.1263) + (HEART_BEAT_PER_MINUTE x 0.4472) - 20.4022] x DURATION_IN_MINUTE / 4.184</span>
+            </div>
+        </div>
+        <p>Formula Provided by: <a href="http://www.braydenwm.com/cal_vs_hr_ref_paper.pdf" target="_blank">Journal of Sport Science</a><p>
+    </div>
+    <!-- jQuery CDN Script Integrated -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <!-- Javascript Script Integrated -->
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>

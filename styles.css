@@ -1,0 +1,147 @@
+body{
+    margin: 0px;
+    font-family: Roboto;
+} 
+table{
+    margin: 0 auto;
+}
+p{
+    text-align: center;
+    line-height: 7px;
+}
+#navbar{
+    background-color: #E91E63;
+    margin: 0px;
+    text-align: center;
+    background-image: url("C:\\Users\\raham\\Downloads\\black-linen.png");
+}
+#navbar button{
+    padding: 2px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#navbar button:hover{
+    background-color: pink;
+    transition: 0.2s linear;
+}
+
+#referenceChart{
+    text-align: left;
+}
+
+#referenceChart{
+    border-collapse: collapse;
+}
+
+#referenceChart, #referenceChart th, #referenceChart td{
+    border: 3px solid #E91E63;
+} 
+
+#referenceChart tr:nth-child(2n), #referenceChart tr th{
+    background-color: rgb(241, 169, 160);
+}
+
+#referenceChart tr th, #referenceChart tr td{
+    border-right: 3px solid #E91E63;
+}
+
+
+button:focus{
+    outline: none;
+}
+
+#container{
+    height: 100%;
+    width: 100%;
+}
+a:visited{
+    color: #FF0000;
+}
+
+.header{
+    text-align: center;
+    background-color:#03A9F4;
+    background-image: url("C:\\Users\\raham\\Downloads\\black-linen.png");
+    margin: 0px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 50px;
+}
+.result{
+    background-color: green;
+    font-weight: 100;
+    text-align: center;
+    margin: 0px;
+}
+
+.formula{
+    color: #015783;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+    line-height: 1.4em;
+    text-align: center;
+    display: block;
+    text-align: center;
+    padding: 5px 0px 5px 10px;
+    
+}
+
+.calculateButton
+{
+    background:green;
+    width: 100% ;
+    border: 2px solid darkgreen;
+    font-size: 24px;
+}
+.clearResults{
+    background: #E91E63;
+    border: 2px solid darkred;
+    width: 64%;
+    font-size: 24px;
+}
+
+.calculatedColor{
+    color: green;
+}
+
+.calculatorSection{
+    margin: 20px;
+}
+
+.hideCalculator{
+    display: none;
+}
+
+.errorMessage{
+    color: red;
+    font-size: 25px;
+}
+
+.display{
+    margin:0px;
+}
+.referenceTableFooterText{
+    font-weight: 700;
+}
+.formulaHeader{
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 600px) {
+    #tableText{
+        font-size: 16px;
+    }
+    .header {
+      font-size: 36px;
+    }
+    .formulaHeader{
+        font-size: 14px;
+    }
+    .referenceTableFooterText{
+        font-size: 14px;
+    }
+  }
