@@ -143,5 +143,6 @@ a:visited{
     }
     .referenceTableText{
         font-size: 14px;
+        padding: 3px 3px 3px 3px;
     }
   }
