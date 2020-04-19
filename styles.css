@@ -146,5 +146,6 @@ a:visited{
         font-size: 14px;
         line-height: 15px;
         padding: 3px 3px 3px 3px;
-    }
+        margin-bottom: 0px;
+    }   
   }
