@@ -14,7 +14,7 @@ p{
     background-color: #E91E63;
     margin: 0px;
     text-align: center;
-    background-image: url("C:\\Users\\raham\\Downloads\\black-linen.png");
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
 }
 #navbar button{
     padding: 2px;
@@ -66,7 +66,7 @@ a:visited{
 .header{
     text-align: center;
     background-color:#03A9F4;
-    background-image: url("C:\\Users\\raham\\Downloads\\black-linen.png");
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
     margin: 0px;
     height: 100px;
     line-height: 100px;
