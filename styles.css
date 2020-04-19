@@ -144,9 +144,9 @@ a:visited{
     }
     .referenceTableText{
         font-size: 14px;
-        line-height: 1.4em;
+        line-height: 1.0em;
         display: block;
-        padding: 5px 0px 5px 10px;
+        padding: 3px 0px 3px 8px;
         
     }   
   }
