@@ -73,8 +73,8 @@ a:visited{
     font-size: 50px;
 }
 .result{
-    background-color: green;
-    font-weight: 100;
+    color: green;
+    font-weight: 900;
     text-align: center;
     margin: 0px;
 }
