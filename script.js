@@ -83,6 +83,12 @@ function calculateBMR(gender){
         else if (gender === "female"){
             bmr = 655 + (9.6 * $(".weight:visible").val()) + (1.8 * $(".height").val()) - (4.7 * $(".age").val());
         }
+        $("#sedentary").text(Math.round(bmr * 1.2).toLocaleString("en-US"));
+        $("#exercise1to3").text(Math.round(bmr * 1.375).toLocaleString("en-US"));
+        $("#exercise4to5").text(Math.round(bmr * 1.55).toLocaleString("en-US"));
+        $("#exercise3to4").text(Math.round(bmr * 1.725).toLocaleString("en-US"));
+        $("#exercise6to7").text(Math.round(bmr * 1.9).toLocaleString("en-US"));
+        $("#veryIntenseExercise").text(Math.round(bmr * 2.0).toLocaleString("en-US"));
         //Display the calculated BMR in the result section
         $(".valueDisplay").text(Math.round(bmr).toLocaleString("en-US"));
         $(".valueDisplay").addClass("calculatedColor");
@@ -121,4 +127,10 @@ function reset(){
     $(".valueDisplay").text("0");
     $(".valueDisplay").removeClass("calculatedColor");
     $(".display:visible").text("");
+    $("#sedentary").text("2,054");
+    $("#exercise1to3").text("2,353");
+    $("#exercise4to5").text("2,507");
+    $("#exercise3to4").text("2,652");
+    $("#exercise6to7").text("2,952");
+    $("#veryIntenseExercise").text("3,251");
 }
