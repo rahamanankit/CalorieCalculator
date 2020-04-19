@@ -58,8 +58,6 @@ button:focus{
 #container{
     height: 100%;
     width: 100%;
-    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
-    background-color: whitesmoke;
 }
 a:visited{
     color: #FF0000;
